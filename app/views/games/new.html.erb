@@ -1,0 +1,10 @@
+<h1> <%= @letters %> </h1>
+
+<form action="/score" method="post" data-turbo="false">
+  <input type="text" name ="longWord">
+  <input type="submit" value="send">
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, value: @letters %>
+
+</form>
